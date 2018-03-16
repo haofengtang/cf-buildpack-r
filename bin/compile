@@ -51,6 +51,11 @@ fi
 
 
 # Haofeng   ---v
+
+function topic() {
+  echo "-----> $*"
+}
+
 APT_CACHE_DIR="$CACHE_DIR/apt/cache"
 APT_STATE_DIR="$CACHE_DIR/apt/state"
 
