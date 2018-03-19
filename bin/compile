@@ -113,10 +113,11 @@ export | grep -E -e ' (PATH|LD_LIBRARY_PATH|LIBRARY_PATH|INCLUDE_PATH|CPATH|CPPP
 # Added to let rgdal know where to find gdal
 echo 'gdalinfo --version'
 gdalinfo --version
-echo 'gdal-config'
-gdal-config
 echo 'which gdalinfo'
 which gdalinfo
+ls -ltr /Library/Frameworks/GDAL.framework/Programs | indent
+#echo 'gdal-config'
+#gdal-config
 export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
 
 # Haofeng   ---^
