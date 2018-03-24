@@ -120,7 +120,7 @@ echo 'which gdalinfo'
 which gdalinfo
 ls -ltr /tmp/staged/app/.apt/usr/bin | indent
 
-find / -name "gdal-config"
+find /Library/Frameworks -name "gdal-config"
 #echo 'gdal-config'
 #gdal-config
 export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
