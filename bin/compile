@@ -67,6 +67,9 @@ APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state
 #topic "apt-get -f install"
 #sudo -S true apt-get -f install
 
+# Show held packages
+apt-mark showhold
+
 topic "Updating apt caches"
 apt-get $APT_OPTIONS update | indent
 
