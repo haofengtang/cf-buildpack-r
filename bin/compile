@@ -114,13 +114,13 @@ export PKG_CONFIG_PATH="$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu/pkgconfig:$BUIL
 export | grep -E -e ' (PATH|LD_LIBRARY_PATH|LIBRARY_PATH|INCLUDE_PATH|CPATH|CPPPATH|PKG_CONFIG_PATH)='  > "$LP_DIR/export"
 
 # Added to let rgdal know where to find gdal
-echo 'gdalinfo --version'
-gdalinfo --version
-echo 'which gdalinfo'
-which gdalinfo
-ls -ltr /tmp/staged/app/.apt/usr/bin | indent
+#echo 'gdalinfo --version'
+#gdalinfo --version
+#echo 'which gdalinfo'
+#which gdalinfo
+#ls -ltr /tmp/staged/app/.apt/usr/bin | indent
 
-find /Library/Frameworks -name "gdal-config"
+#find /Library/Frameworks -name "gdal-config"
 #echo 'gdal-config'
 #gdal-config
 export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
