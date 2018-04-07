@@ -62,7 +62,7 @@ APT_STATE_DIR="$CACHE_DIR/apt/state"
 mkdir -p "$APT_CACHE_DIR/archives/partial"
 mkdir -p "$APT_STATE_DIR/lists/partial"
 
-APT_OPTIONS="-o debug::nolocking=false -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR"
+APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR"
 
 #topic "apt-get -f install"
 #sudo -S true apt-get -f install
@@ -159,11 +159,11 @@ echo "Downloading and unpacking R binaries ($R_BINARIES)" | indent
 
 # Testing code
 echo "Before downloading and unpacking R binaries ($R_BINARIES)" | indent
-ls -ltr $BUILD_DIR
+ls -lta $BUILD_DIR
 curl $R_BINARIES -s -o - | tar xzf - -C $BUILD_DIR
 # Testing code
 echo "After downloading and unpacking R binaries ($R_BINARIES)" | indent
-ls -ltr $BUILD_DIR
+ls -lta $BUILD_DIR
 
 # need to copy the binaries to /app/vendor so that R works when compiling packages
 
